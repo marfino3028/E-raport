@@ -1,0 +1,33 @@
+
+
+#menu li{
+  list-style: none;
+  display: inline-block;
+}
+#menu li a{
+  max-height: 50px;
+  text-decoration: none;
+  position: relative;  
+  font-size: 11px;
+  font-weight: 100;
+  font-family: sans-serif;
+  display: block;
+  overflow: hidden;
+  transition: 0.8s all;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+#menu li a:before{
+  content: '';
+  width: 40px;
+  position: absolute;
+  border-bottom: 5px solid #000000;
+  bottom: 0;
+  right: 200px;
+  transition: 0.8s all;
+}
+#menu li a:hover:before{
+  right: 0;
+  
+}
+

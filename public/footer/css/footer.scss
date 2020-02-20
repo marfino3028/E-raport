@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@function rem($value) {
+	@return unquote($value/1px)/16+"rem");
+}
+*{
+	font-family: "Montserrat", sans-serif;
+}
+$colors: (
+	red: #f63f59, blue: #0a1a4d);
+
+@each $colorName, $colorValue in $colors {
+	.bg-#{$colorName} {
+		background-color: #{$colorValue};
+	}
+	.text-#{$colorName} {
+		color: #{$colorValue};
+	}
+}
+.mainContainer{
+	height: 1000px;
+	@extend .bg-blue;
+	position: relative;
+	/*z-index: 1031;*/
+}
+.icon{
+	height: rem(40px);
+	width: rem(40px);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	&:hover{
+		color: #ffffff;
+	}
+}
